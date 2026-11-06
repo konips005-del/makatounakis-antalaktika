@@ -53,13 +53,13 @@
   .hero::before{content:"";position:absolute;inset:0;z-index:1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);opacity:.5}
   .hero-grid{position:relative;z-index:2;display:block;width:100%}
   .hero-grid > div{max-width:640px}
-  .hero-bg{position:absolute;top:0;bottom:0;left:22%;right:0;z-index:0;overflow:hidden;
-    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
-  .hero-bg::before{content:"";position:absolute;inset:-3%;background:url('assets/range-rover.jpg') center 58%/cover no-repeat;
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hero-bg::before{content:"";position:absolute;inset:-3%;background:url('assets/range-rover.jpg') 70% 58%/cover no-repeat;
     filter:brightness(.62) contrast(1.25) saturate(.7);animation:kb 22s ease-in-out infinite alternate}
   .hero-bg::after{content:"";position:absolute;inset:0;
     background:radial-gradient(120% 90% at 60% 55%,transparent 35%,rgba(13,13,15,.85) 100%),
                linear-gradient(180deg,rgba(13,13,15,.92) 0%,rgba(13,13,15,.35) 32%,transparent 50%,transparent 72%,var(--ink) 100%),
+               linear-gradient(90deg,rgba(13,13,15,.72) 0%,rgba(13,13,15,.45) 35%,transparent 62%),
                linear-gradient(90deg,rgba(214,20,28,.0) 40%,rgba(214,20,28,.14) 100%)}
   @keyframes kb{from{transform:scale(1)}to{transform:scale(1.07) translateX(-1.5%)}}
   .hero h1,.hero p.lead{text-shadow:0 4px 30px rgba(0,0,0,.8)}
@@ -168,8 +168,7 @@
 
   @media (max-width:980px){
     .hero-grid,.why,.contact{grid-template-columns:1fr}
-    .hero-bg{left:0;-webkit-mask-image:none;mask-image:none}
-    .hero-bg::before{background-position:30% 58%;filter:brightness(.5) contrast(1.2) saturate(.7)}
+        .hero-bg::before{background-position:30% 58%;filter:brightness(.5) contrast(1.2) saturate(.7)}
     .services{grid-template-columns:1fr 1fr}
     .steps{grid-template-columns:1fr}
     .menu{position:fixed;inset:78px 0 auto 0;flex-direction:column;gap:0;background:rgba(13,13,15,.98);border-bottom:1px solid var(--line);padding:10px 24px 24px;display:none}
